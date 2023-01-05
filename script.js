@@ -12,3 +12,8 @@ const app = new Vue({
         multiplication: multiplication
     }
 })
+const canvas = document.getElementById("canvas");
+const pole = canvas.getContext("2d");
+
+pole.strokeStyle = "blue"
+pole.strokeRect(10, 10, firstnum*20, secondnum*20);
