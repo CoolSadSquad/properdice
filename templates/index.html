@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+ <head>
+     <title>properdice by ez</title>
+     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+     <link href="{{ url_for('static', path='/style.css') }}" rel="stylesheet">
+     <link rel="icon" type="image/x-icon" href="{{ url_for('static', path='/src/favicon.png') }}">
+ </head>
+ <body>
+  <div class="header"></div>
+  <div class="wrapper">
+    <canvas id="canvas" width="1200" height="900"></canvas>
+    <div class="number" id ="app">
+        <div>{{height}} {{width}}</div>
+        <form action="" onsubmit="sendMessage(event, 'roll')">
+        <button>ROLL</button>
+        </form>
+<!--        <form action="" onsubmit="sendMessage(event, 'delete')">-->
+<!--        <button>DELETE</button>-->
+        </form>
+    </div>
+        <ul id='messages'>
+        </ul>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+  <script src="{{ url_for('static', path='/script.js') }}"></script>
+ </body>
+</html>
