@@ -1,10 +1,16 @@
 body{
     background-color: #151515;
+    margin: 0px;
+    padding: 0px;
+}
+.header {
+    padding: 40px;
+    background: #080808;
 }
 .wrapper{
     display: grid;
     grid-template-columns: 1500px 0;
-    margin-top: 140px;
+    margin-top: 50px;
     column-gap: 20px;
 }
 .number{
@@ -33,6 +39,5 @@ button{
     font-weight:bold;
     margin-left: auto; 
     margin-right: auto;
-    margin-bottom: 10px;
     font-family: Arial;
 }
