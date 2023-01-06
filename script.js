@@ -22,7 +22,7 @@ function createNewPole(){
     xCoord = prompt('Вы ввели неправильное значение X. Введите новое значение = ', [''])
   }
   yCoord = prompt('Введите значение Y = ',['']);
-  pole.strokeStyle = "blue";
+  pole.strokeStyle = "lightgrey";
   pole.strokeRect(xCoord*20, yCoord*20, newRectangle.height*20, newRectangle.width*20);
   app.height = newheight;
   app.width = newwidth
