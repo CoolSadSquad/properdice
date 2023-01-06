@@ -29,11 +29,12 @@ function createNewPole(){
   startY = randomCoordsY();
   let newRectangle = addNewRect(newheight, newwidth, startX, startY, id);
   bufferRectangle.push(newRectangle)
-  pole.strokeStyle = "lightgrey";
-  pole.strokeRect(startX*40, startY*40, newRectangle.width*40, newRectangle.height*40);
+  pole.fillStyle = "lightgrey";
+  pole.fillRect(startX*40, startY*40, newRectangle.width*40, newRectangle.height*40);
+  pole.clearRect(startX*40+1, startY*40+1, newRectangle.width*40-2, newRectangle.height*40-2);
   app.height = newheight;
-  app.width = newwidth
-  id++
+  app.width = newwidth;
+  id++;
 }
 let app = new Vue({
     el: '#app',
@@ -43,8 +44,8 @@ let app = new Vue({
     }
   })
 function removePole(){
-  pole.strokeStyle = "#2B2B2B"
-  pole.strokeRect(bufferRectangle[id-1].coordX*40, bufferRectangle[id-1].coordY*40, bufferRectangle[id-1].width*40, bufferRectangle[id-1].height*40)
+  pole.fillStyle = "#2B2B2B"
+  pole.clearRect(bufferRectangle[id-1].coordX*40, bufferRectangle[id-1].coordY*40, bufferRectangle[id-1].width*40, bufferRectangle[id-1].height*40)
   bufferRectangle.pop()
   id--
 }
