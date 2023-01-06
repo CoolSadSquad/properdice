@@ -1,11 +1,8 @@
-function getRandomInt() {
-    return Math.floor(Math.random() * 6)+1;
-  }
 function addNewRect(){
      return new Rectangle(firstnum, secondnum, "0,0", "first", 0)
 }
 function rollDice(){
-    return randnum = getRandomInt()
+    return randnum = Math.floor(Math.random() * 6)+1;
 }
 class Rectangle {
   constructor(height, width, coords, player, id) {
@@ -18,7 +15,7 @@ class Rectangle {
 }
 let firstnum = rollDice();
 let secondnum = rollDice();
-const multiplication = firstnum*secondnum
+let multiplication = firstnum*secondnum
 const app = new Vue({
     el: '#app',
     data:{
@@ -27,8 +24,8 @@ const app = new Vue({
         multiplication: multiplication
     }
 })
-const canvas = document.getElementById("canvas");
-const pole = canvas.getContext("2d");
+let canvas = document.getElementById("canvas");
+let pole = canvas.getContext("2d");
 pole.strokeStyle = "blue";
 firstRectangle = addNewRect();
 pole.strokeRect(10, 10, firstRectangle.height*20, firstRectangle.width*20);
