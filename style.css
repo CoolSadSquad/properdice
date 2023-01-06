@@ -1,3 +1,4 @@
 body{background-color: #151515;}
 .user{color: lightgrey; font-family: Arial; font-size: 10px; text-align: right;}
-.number{color: lightgrey; font-family: Arial; font-size: 30px; text-align: center;}
+.number{color: lightgrey; font-family: Arial; font-size: 8px; text-align: center;}
+canvas{background-color:white; align-self: center;}
