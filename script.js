@@ -17,8 +17,13 @@ function createNewPole(){
   newheight = rollDice();
   newwidth = rollDice();
   let newRectangle = addNewRect(newheight, newwidth);
+  xCoord = prompt('Введите значение X = ',['']);
+  while (xCoord>=60){
+    xCoord = prompt('Вы ввели неправильное значение X. Введите новое значение = ', [''])
+  }
+  yCoord = prompt('Введите значение Y = ',['']);
   pole.strokeStyle = "blue";
-  pole.strokeRect(10, 10, newRectangle.height*20, newRectangle.width*20);
+  pole.strokeRect(xCoord*20, yCoord*20, newRectangle.height*20, newRectangle.width*20);
   app.height = newheight;
   app.width = newwidth
 }
