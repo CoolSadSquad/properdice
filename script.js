@@ -1,11 +1,8 @@
-function getRandomInt() {
-    return Math.floor(Math.random() * 6)+1;
-  }
-function addNewRect(){
-     return new Rectangle(firstnumb, secondnumb, "0,0", "first", 0)
+function addNewRect(height, width){
+     return new Rectangle(height, width, "0,0", "first", 0)
 }
 function rollDice(){
-    return randnum = getRandomInt()
+    return Math.floor(Math.random() * 6)+1;
 }
 class Rectangle {
   constructor(height, width, coords, player, id) {
@@ -16,35 +13,21 @@ class Rectangle {
     this.id = id;
   }
 }
-
-let firstnumb = rollDice();
-let secondnumb = rollDice();
-// let firstnum = rollDice();
-// let secondnum = rollDice();
-// const multiplication = firstnum*secondnum
-// const app = new Vue({
-//     el: '#app',
-//     data:{
-//         firstnum: firstnum,
-//         secondnum: secondnum,
-//         multiplication: multiplication
-//     }
-// })
 function createNewPole(){
-  firstnumb = rollDice();
-  secondnumb = rollDice();
-  let newRectangle = addNewRect(firstnumb,secondnumb);
-  let multiplicationb = firstnumb*secondnumb;
+  newheight = rollDice();
+  newwidth = rollDice();
+  let newRectangle = addNewRect(newheight, newwidth);
   pole.strokeStyle = "blue";
   pole.strokeRect(10, 10, newRectangle.height*20, newRectangle.width*20);
-  app = new Vue({
+  app.height = newheight;
+  app.width = newwidth
+}
+let app = new Vue({
     el: '#app',
     data:{
-      firstnum: firstnumb,
-      secondnum: secondnumb,
-      multiplication: multiplicationb
+      height: '',
+      width: ''
     }
   })
-}
 const canvas = document.getElementById("canvas");
 const pole = canvas.getContext("2d");
