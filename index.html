@@ -5,13 +5,14 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <link rel="stylesheet" href ="style.css">
  </head>
- <body> 
+ <body>
+  <div class="wrapper">
+    <canvas id="canvas" width="1200" height="750" ></canvas> 
     <div class="number" id ="app">
-        <h1>1dice {{height}}</h1>
-        <h1>2dice {{width}}</h1>
+        <div>{{height}} {{width}}</div>
+        <button onclick="createNewPole()">ROLL</button>
     </div>
-    <canvas id="canvas" width="1200" height="800" ></canvas>
-    <button onclick="createNewPole()">ROLL</button>
+  </div>
   <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
   <script src="script.js"></script>
  </body>
