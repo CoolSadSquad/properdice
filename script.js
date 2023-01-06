@@ -15,10 +15,10 @@ class Rectangle {
   }
 }
 function randomCoordsX(){
-    return Math.floor(Math.random() * 30);
+    return Math.floor(Math.random() * 40);
 }
 function randomCoordsY(){
-  return Math.floor(Math.random() * 20);
+  return Math.floor(Math.random() * 30);
 }
 let bufferRectangle = []
 let id = 0
@@ -30,8 +30,8 @@ function createNewPole(){
   let newRectangle = addNewRect(newheight, newwidth, startX, startY, id);
   bufferRectangle.push(newRectangle)
   pole.fillStyle = "lightgrey";
-  pole.fillRect(startX*40, startY*40, newRectangle.width*40, newRectangle.height*40);
-  pole.clearRect(startX*40+1, startY*40+1, newRectangle.width*40-2, newRectangle.height*40-2);
+  pole.fillRect(startX*30, startY*30, newRectangle.width*30, newRectangle.height*30);
+  pole.clearRect(startX*30+1, startY*30+1, newRectangle.width*30-2, newRectangle.height*30-2);
   app.height = newheight;
   app.width = newwidth;
   id++;
@@ -45,7 +45,7 @@ let app = new Vue({
   })
 function removePole(){
   pole.fillStyle = "#2B2B2B"
-  pole.clearRect(bufferRectangle[id-1].coordX*40, bufferRectangle[id-1].coordY*40, bufferRectangle[id-1].width*40, bufferRectangle[id-1].height*40)
+  pole.clearRect(bufferRectangle[id-1].coordX*30, bufferRectangle[id-1].coordY*30, bufferRectangle[id-1].width*30, bufferRectangle[id-1].height*30)
   bufferRectangle.pop()
   id--
 }
