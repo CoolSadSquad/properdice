@@ -7,7 +7,7 @@ from pathlib import Path
 
 app = FastAPI()
 
-templates = Jinja2Templates(directory="templates")
+templates = Jinja2Templates(directory="../templates")
 app.mount(
     "/static",
     StaticFiles(directory=Path(__file__).parent.parent.absolute() / "static"),
@@ -28,7 +28,3 @@ async def root(request: Request):
 #     while True:
 #         data = await websocket.receive_text()
 #         await websocket.send_text(f"Message text was: {data}")
-
-
-if __name__ == "__main__":
-    uvicorn.run("main:app", port=8000, log_level="info")

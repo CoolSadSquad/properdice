@@ -1,7 +1,7 @@
 body{
     background-color: #151515;
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
 }
 .header {
     padding: 40px;
@@ -14,8 +14,8 @@ body{
     column-gap: 20px;
 }
 .number{
-    color: lightgrey; 
-    font-family: Arial; 
+    color: lightgrey;
+    font-family: Arial, serif;
     font-size: 20px;
     font-weight:bold;
     text-align: center;
@@ -40,5 +40,5 @@ button{
     font-weight:bold;
     margin-left: auto; 
     margin-right: auto;
-    font-family: Arial;
+    font-family: Arial, serif;
 }

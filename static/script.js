@@ -23,7 +23,7 @@ function randomCoordsY(){
 let bufferRectangle = []
 let id = 0
 function createNewPole(){
-  newheight = rollDice();
+   newheight = rollDice();
   newwidth = rollDice();
   startX = randomCoordsX();
   startY = randomCoordsY();
@@ -49,5 +49,5 @@ function removePole(){
   bufferRectangle.pop()
   id--
 }
-const canvas = document.getElementById("canvas");
-const pole = canvas.getContext("2d");
+let canvas = document.getElementById("canvas");
+let pole = canvas.getContext("2d");
